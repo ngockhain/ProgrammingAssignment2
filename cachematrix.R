@@ -2,7 +2,7 @@
 ## functions do
 
 ## Write a short comment describing this function
-library(pracma)
+# library(pracma)
 
 
 makeCacheMatrix <- function(x = matrix()) {
@@ -29,7 +29,7 @@ cacheSolve <- function(x, ...) {
         message("Loaded inverse matrix from cache.")
         return(inv_mtrx)
     }
-    inv_mtrx <- inv(x$get(), ...)
+    inv_mtrx <- solve(x$get(), ...)
     x$set_inv(inv_mtrx)
     inv_mtrx
 }
